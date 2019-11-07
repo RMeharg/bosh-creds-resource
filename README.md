@@ -25,6 +25,18 @@ resources:
     opsman_url: {{opsman_url}}
 ```
 
+For LDAP/SAML authentication, use a client credentials for the resource:
+
+```
+resources:
+- name: om-bosh-creds
+  type: bosh-creds
+  source:
+    pcf_opsman_client_id: {{pcf_opsman_client_id}}
+    pcf_opsman_client_secret: {{pcf_opsman_client_secret}}
+    opsman_url: {{opsman_url}}
+```
+
 Then add the resource to your job:
 
 ```
